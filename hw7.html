@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gallery</title>
+    <style>
+      .imgBig img {
+        position: absolute;
+        left: 15px;
+        top: 0px;
+      }
+      #tea {
+        z-index: 1;
+      }
+      #book {
+        z-index: 2;
+      }
+      #dog {
+        z-index: 3;
+      }
+      #river {
+        z-index: 4;
+      }
+      #elevators {
+        z-index: 5;
+      }
+      .imgSmall img {
+        position: relative;
+        top: 500px;
+        left: 0px;
+        z-index: 15;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="imgBig">
+      <img src="7/1.jpeg" id="tea" alt="" />
+      <img src="7/2.jpeg" id="book" alt="" />
+      <img src="7/3.jpeg" id="dog" alt="" />
+      <img src="7/4.jpeg" id="river" alt="" />
+      <img src="7/5.jpeg" id="elevators" alt="" />
+    </div>
+    <div class="imgSmall">
+      <img src="7/1-thumb.jpeg" id="SmaLtea" alt="" />
+      <img src="7/2-thumb.jpeg" id="SmaLbook" alt="" />
+      <img src="7/3-thumb.jpeg" id="SmaLdog" alt="" />
+      <img src="7/4-thumb.jpeg" id="SmaLriver" alt="" />
+      <img src="7/5-thumb.jpeg" id="SmaLelevators" alt="" />
+    </div>
+    <script>
+      const tea = document.getElementById("tea");
+      const SmaLtea = document.getElementById("SmaLtea");
+      const book = document.getElementById("book");
+      const SmaLbook = document.getElementById("SmaLbook");
+      const dog = document.getElementById("dog");
+      const SmaLdog = document.getElementById("SmaLdog");
+      const river = document.getElementById("river");
+      const SmaLriver = document.getElementById("SmaLriver");
+      const elevators = document.getElementById("elevators");
+      const SmaLelevators = document.getElementById("SmaLelevators");
+      let zindexN = 20;
+      SmaLtea.onclick = function () {
+        tea.style.zIndex = zindexN++;
+      };
+      SmaLbook.onclick = function () {
+        book.style.zIndex = zindexN++;
+      };
+      SmaLdog.onclick = function () {
+        dog.style.zIndex = zindexN++;
+      };
+      SmaLriver.onclick = function () {
+        river.style.zIndex = zindexN++;
+      };
+      SmaLelevators.onclick = function () {
+        elevators.style.zIndex = zindexN++;
+      };
+    </script>
+  </body>
+</html>
